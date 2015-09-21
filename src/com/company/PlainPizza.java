@@ -9,12 +9,12 @@ public class PlainPizza implements Pizza {
 
     @Override
     public String getDescription() {
-        return "Thin Dough";
+        return size + " sized pizza with thin Dough";
     }
 
     @Override
     public double getCost() {
-        return 4.00;
+        return PriceMultipier.getPrice(size, 4.00);
     }
 
     @Override
