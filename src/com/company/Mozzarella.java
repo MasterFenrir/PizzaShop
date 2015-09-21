@@ -5,6 +5,11 @@ package com.company;
  */
 public class Mozzarella extends ToppingDecorator {
 
+    /**
+     * Construct a mozzarella pizza
+     *
+     * @param newPizza
+     */
     public Mozzarella(Pizza newPizza) {
         super(newPizza);
         System.out.println("Adding Dough");
@@ -18,8 +23,8 @@ public class Mozzarella extends ToppingDecorator {
 
     @Override
     public double getCost() {
-        return PriceMultipier.round(
-                tempPizza.getCost() + PriceMultipier.getPrice(this.getSize(), 0.50)
+        return PriceHelper.round(
+                tempPizza.getCost() + PriceHelper.getPrice(this.getSize(), 0.50)
                 , 2);
     }
 }
