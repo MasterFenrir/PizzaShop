@@ -9,4 +9,8 @@ public interface Pizza {
 
     double getCost();
 
+    String getSize();
+
+    void setSize(String size);
+
 }
