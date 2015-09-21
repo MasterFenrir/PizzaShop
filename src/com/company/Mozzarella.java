@@ -18,6 +18,8 @@ public class Mozzarella extends ToppingDecorator {
 
     @Override
     public double getCost() {
-        return tempPizza.getCost() + PriceMultipier.getPrice(this.getSize(), 0.50);
+        return PriceMultipier.round(
+                tempPizza.getCost() + PriceMultipier.getPrice(this.getSize(), 0.50)
+                , 2);
     }
 }

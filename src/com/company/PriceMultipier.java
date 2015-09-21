@@ -24,7 +24,7 @@ public class PriceMultipier {
             default:
                 break;
         }
-        return round(price, 2);
+        return round(result, 2);
     }
 
     public static double round(double value, int places) {
