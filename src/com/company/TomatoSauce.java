@@ -17,6 +17,6 @@ public class TomatoSauce extends ToppingDecorator {
 
     @Override
     public double getCost() {
-        return tempPizza.getCost() + 0.35;
+        return tempPizza.getCost() + PriceMultipier.getPrice(this.getSize(), 0.35);
     }
 }
